@@ -12,12 +12,12 @@ async function updateSRInfo() {
     });
 
     const account = tronWeb.defaultAddress.base58;
-    console.log("Account Address: ", account);
+    console.log("SR Account Address: ", account);
 
     // API Endpoint
     const apiUrl = "https://nile.trongrid.io/wallet/updatewitness";             //Uncomment this for Nile testnet
     //const apiUrl = "https://api.trongrid.io/wallet/updatewitness";            //Uncomment this for Mainnet 
-    const SRAddress = "TZ7GK4q6DVrByQv7jky5SahiR1NUVVWDst";                     //Replace with your SR address
+    const SRAddress = account;
     const SRURL = "https://yourSRupdateURL.com";                                // Replace with your actual SR URL
 
     // Request Payload
@@ -42,6 +42,7 @@ async function updateSRInfo() {
 
         console.log('Transaction hash:', broadcastTransaction.txid);
         console.log('Transaction result:', broadcastTransaction.result);
+        console.log("URL Succcesfully updated :)")
 
 
 
